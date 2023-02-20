@@ -38,7 +38,7 @@ def main():
         def processNode(node):
             remove_variation = False
             if node.move is not None:
-                if trimmable(node.nags) and node.turn() == repertoire_color:
+                if trimmable(node.nags) and node.turn() != repertoire_color:
                     node.parent.remove_variation(node)
                     remove_variation = True
             if not remove_variation:
